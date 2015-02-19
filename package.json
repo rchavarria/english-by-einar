@@ -1,7 +1,7 @@
 {
   "name": "english-by-einar",
   "version": "1.0.0",
-  "description": "english-by-einar: An Ionic project",
+  "description": "A hybrid application for Android to learn English with Einar"
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
