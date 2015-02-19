@@ -30,3 +30,7 @@ node_modules
 # Vim files
 *.swp
 
+# Directories created by Ionic framework
+platforms/
+plugins/
+
