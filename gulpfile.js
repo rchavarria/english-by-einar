@@ -4,12 +4,14 @@
 
     var gulp = require('gulp'),
         gutil = require('gulp-util'),
-        bower = require('bower'),
         sass = require('gulp-sass'),
         minifyCss = require('gulp-minify-css'),
         rename = require('gulp-rename'),
-        sh = require('shelljs'),
         jslint = require('gulp-jslint'),
+
+        bower = require('bower'),
+        sh = require('shelljs'),
+
         paths = {
             sass: ['./scss/**/*.scss']
         };
