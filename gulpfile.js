@@ -55,9 +55,9 @@
 
     gulp.task('jslint', function () {
         return gulp
-            .src(['gulpfile.js'])
+            .src(['gulpfile.js', 'www/js/**/*.js'])
             .pipe(jslint({
-                global: ['console', 'module', 'require', 'describe', 'it', 'expect']
+                global: ['console', 'module', 'require', 'describe', 'it', 'expect', 'angular']
             }))
             .pipe(jslint());
     });
