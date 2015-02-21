@@ -14,12 +14,15 @@
     "gulp-util": "^2.2.14",
     "gulp-jslint": "~0.2.2",
     "mocha": "~2.1.0",
-    "karma": "~0.12.31",
-    "karma-mocha": "~0.1.10",
-    "karma-phantomjs-launcher": "~0.1.4",
-    "phantomjs": "~1.9.15",
-    "sinon-chai": "~2.7.0",
     "chai": "~2.0.0",
-    "sinon": "~1.12.2"
+    "sinon": "~1.12.2",
+    "sinon-chai": "~2.7.0",
+    "phantomjs": "~1.9.15",
+    "karma": "~0.12.31",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-mocha": "~0.1.10",
+    "karma-chai": "~0.1.0",
+    "karma-sinon": "~1.0.4",
+    "karma-sinon-chai": "~0.3.0"
   }
 }
