@@ -8,6 +8,7 @@
         minifyCss = require('gulp-minify-css'),
         rename = require('gulp-rename'),
         jslint = require('gulp-jslint'),
+        karma = require('karma').server,
 
         bower = require('bower'),
         sh = require('shelljs'),
@@ -62,6 +63,12 @@
                 global: ['console', 'module', 'require', 'describe', 'it', 'expect', 'angular']
             }))
             .pipe(jslint());
+    });
+
+    gulp.task('test', function (done) {
+        karma.start({
+            configFile: __dirname + '/karma.conf.js'
+        }, done);
     });
 
 }());
