@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('playSound', ['ionic', 'ngCordova'])
+    angular.module('EnglishByEinar', ['ionic', 'ngCordova'])
 
         .run(function ($window, $ionicPlatform) {
             $ionicPlatform.ready(function () {

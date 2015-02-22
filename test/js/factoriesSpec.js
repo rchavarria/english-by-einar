@@ -1,5 +1,5 @@
 describe('HookUpTestsFactory', function () {
-    beforeEach(module('playSound'));
+    beforeEach(module('EnglishByEinar'));
 
     var HookUpTestsFactory;
 

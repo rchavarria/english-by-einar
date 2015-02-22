@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('playSound')
+    angular.module('EnglishByEinar')
         .factory('HookUpTestsFactory', [function () {
             function HookUpTestsFactory() {
                 this.sumTwoNumbers = function (a, b) {
