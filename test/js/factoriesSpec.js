@@ -7,10 +7,6 @@ describe('HookUpTestsFactory', function () {
         HookUpTestsFactory = _HookUpTestsFactory_;
     }));
 
-    it('hooks up AngularJS factories', function () {
-        expect(HookUpTestsFactory).not.to.be.undefined;
-    });
-
     describe('#sumTwoNumbers', function () {
 
         it('sums a and b', function () {
