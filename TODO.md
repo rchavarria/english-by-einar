@@ -1,6 +1,7 @@
 # TASKS
 - Create the infraestructure to test the app : karma, mocha, chai, sinon
--- configure karma to load Angular, ngCordova, Ionic libraries to be able to test AngularJS controllers
+++ configure karma to load Angular, ngCordova, Ionic libraries to be able to test AngularJS controllers
+++ create a factory, and test it (it doesn't matter what the factory does)
 
 # TODO list
 - Integrate project with Travis-CI, to get tests run every git push

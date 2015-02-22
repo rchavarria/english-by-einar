@@ -17,6 +17,7 @@ module.exports = function(config) {
         files: [
             'www/lib/ionic/js/ionic.bundle.js',
             'www/lib/ngCordova/dist/ng-cordova.js',
+            'www/lib/angular-mocks/angular-mocks.js',
 
             // production code
             'www/js/**/*.js',
