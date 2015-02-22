@@ -24,5 +24,8 @@
     "karma-chai": "~0.1.0",
     "karma-sinon": "~1.0.4",
     "karma-sinon-chai": "~0.3.0"
+  },
+  "scripts": {
+      "test": "bower install && gulp test"
   }
 }
