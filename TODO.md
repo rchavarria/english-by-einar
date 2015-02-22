@@ -1,14 +1,6 @@
 # TASKS
 - Create the infraestructure to test the app : karma, mocha, chai, sinon
--- install karma
--- install phantomjs
--- install mocha
--- configure karma + mocha + phantomjs + karma singleRun
--- install chai
--- configura chai in mocha
--- install sinon
--- install sinon-chai
--- configure sinon, chai, mocha
+-- configure karma to load Angular, ngCordova, Ionic libraries to be able to test AngularJS controllers
 
 # TODO list
 - Integrate project with Travis-CI, to get tests run every git push
