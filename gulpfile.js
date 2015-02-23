@@ -1,4 +1,4 @@
-/*global process, require, console*/
+/*global process, require, console */
 (function () {
     'use strict';
 
@@ -58,18 +58,21 @@
 
     gulp.task('jslint', function () {
         return gulp
-            .src(['gulpfile.js', 'www/js/**/*.js'])
+            .src(['gulpfile.js', 'www/js/**/*.js', 'test/js/**/*.js'])
             .pipe(jslint({
                 global: ['console', 'module', 'require', 'describe', 'it', 'expect', 'angular']
             }))
             .pipe(jslint());
     });
 
+    /*jslint nomen: true*/
+    /*global __dirname*/
     gulp.task('test', function (done) {
         karma.start({
             configFile: __dirname + '/karma.conf.js'
         }, done);
     });
+    /*jslint nomen: false*/
 
 }());
 

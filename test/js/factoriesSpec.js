@@ -1,19 +1,28 @@
-describe('HookUpTestsFactory', function () {
-    beforeEach(module('EnglishByEinar'));
+/*global describe, beforeEach, module, inject, it, expect*/
+(function () {
+    'use strict';
 
-    var HookUpTestsFactory;
+    describe('HookUpTestsFactory', function () {
+        beforeEach(module('EnglishByEinar'));
 
-    beforeEach(inject(function (_HookUpTestsFactory_) {
-        HookUpTestsFactory = _HookUpTestsFactory_;
-    }));
+        var HookUpTestsFactory;
 
-    describe('#sumTwoNumbers', function () {
+        /*jslint nomen: true*/
+        beforeEach(inject(function (_HookUpTestsFactory_) {
+            HookUpTestsFactory = _HookUpTestsFactory_;
+        }));
+        /*jslint nomen: false*/
 
-        it('sums a and b', function () {
-            var sum = HookUpTestsFactory.sumTwoNumbers(2, 2);
-            expect(4).equal(sum);
+        describe('#sumTwoNumbers', function () {
+
+            it('sums a and b', function () {
+                var sum = HookUpTestsFactory.sumTwoNumbers(2, 2);
+                expect(4).equal(sum);
+            });
+
         });
 
     });
 
-});
+}());
+

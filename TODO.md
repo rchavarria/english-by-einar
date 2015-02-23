@@ -1,7 +1,10 @@
 # TASKS
+- Create some kind of factory to create objects that represent every english term, or concept
+-- test concept repository
+-- test concept ?
+-- concept builder????
 
 # TODO list
-- Create some kind of factory to create objects that represent every english term, or concept
 - Write first test about the service that handles EnglishConcepts
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests

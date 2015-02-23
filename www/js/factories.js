@@ -1,3 +1,4 @@
+/*global angular*/
 (function () {
     'use strict';
 
@@ -6,7 +7,7 @@
             function HookUpTestsFactory() {
                 this.sumTwoNumbers = function (a, b) {
                     return a + b;
-                }
+                };
             }
 
             return new HookUpTestsFactory();

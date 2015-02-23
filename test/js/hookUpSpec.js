@@ -1,7 +1,15 @@
-describe('Hook up', function () {
+/*global describe, beforeEach, module, inject, it, expect*/
+(function () {
+    'use strict';
 
-    it('hooks up tests', function () {
-        expect(4).equal(2 + 2);
+    describe('Hook up', function () {
+
+        it('hooks up tests', function () {
+            expect(4).equal(2 + 2);
+        });
+
     });
 
-});
+}());
+
+
