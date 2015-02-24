@@ -1,7 +1,7 @@
 # TASKS
 - Create some kind of factory to create objects that represent every english term, or concept
--- test concept repository
 -- test concept ?
+++ test concept repository
 -- concept builder????
 
 # TODO list
