@@ -57,6 +57,20 @@
                 expect(repo.next().thumbnail).to.equal('thumbnail#2');
             });
 
+            it('returns concepts from the beginning when all have been returned', function () {
+                repo.addConcept(new Concept('thumbnail#1'));
+                repo.addConcept(new Concept('thumbnail#2'));
+                repo.addConcept(new Concept('thumbnail#3'));
+
+                repo.next();
+                repo.next();
+
+                // last concept
+                expect(repo.next().thumbnail).to.equal('thumbnail#3');
+                // first one
+                expect(repo.next().thumbnail).to.equal('thumbnail#1');
+            });
+
         });
 
     });
