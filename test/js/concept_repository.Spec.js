@@ -1,4 +1,4 @@
-/*global describe, beforeEach, module, inject, it, expect*/
+/*global describe, beforeEach, afterEach, module, inject, it, expect*/
 (function () {
     'use strict';
 
@@ -15,11 +15,15 @@
         }));
         /*jslint nomen: false*/
 
+        afterEach(function () {
+            repo.init();
+        });
+
         describe('Inicialization', function () {
 
-            it('contains some concepts from the beginning', function () {
+            it('is empty from the beginning', function () {
                 var count = repo.count();
-                expect(count).to.be.above(0);
+                expect(count).to.equal(0);
             });
 
         });
@@ -28,7 +32,29 @@
 
             it('adds a new concept to the repo', function () {
                 repo.addConcept(new Concept());
-                expect(repo.count()).to.be.above(1);
+                expect(repo.count()).to.be.above(0);
+            });
+
+        });
+
+        describe('#init', function () {
+
+            it('resets all stored concepts', function () {
+                repo.addConcept(new Concept());
+                repo.init();
+                expect(repo.count()).to.equal(0);
+            });
+
+        });
+
+        describe('#next', function () {
+
+            it('returns the very next concept in the repo', function () {
+                repo.addConcept(new Concept('thumbnail#1'));
+                repo.addConcept(new Concept('thumbnail#2'));
+
+                expect(repo.next().thumbnail).to.equal('thumbnail#1');
+                expect(repo.next().thumbnail).to.equal('thumbnail#2');
             });
 
         });
