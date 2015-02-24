@@ -67,7 +67,7 @@
 
     /*jslint nomen: true*/
     /*global __dirname*/
-    gulp.task('test', function (done) {
+    gulp.task('test', ['jslint'], function (done) {
         karma.start({
             configFile: __dirname + '/karma.conf.js'
         }, done);
