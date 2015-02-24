@@ -27,8 +27,7 @@
         describe('#addConcept', function () {
 
             it('adds a new concept to the repo', function () {
-                var irrelevantObject = {};
-                repo.addConcept(new Concept(irrelevantObject, irrelevantObject, irrelevantObject));
+                repo.addConcept(new Concept());
                 expect(repo.count()).to.be.above(1);
             });
 
