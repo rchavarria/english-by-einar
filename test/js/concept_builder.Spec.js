@@ -47,6 +47,19 @@
 
         });
 
+        describe('#withImage', function () {
+
+            it('sets image properties to a Concept', function () {
+                var concept = builder
+                    .withImage('some url', 'some description')
+                    .build();
+
+                expect(concept.image.url).to.equal('some url');
+                expect(concept.image.description).to.equal('some description');
+            });
+
+        });
+
     });
 
 }());
