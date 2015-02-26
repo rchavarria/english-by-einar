@@ -76,20 +76,17 @@
 
             it('resets all Concept cached properties', function () {
                 var concept = builder
-                    .withAudio('some url')
+                    .withThumbnail('', '', '')
+                    .withImage('', '')
+                    .withAudio('')
                     .build();
-                expect(concept.audio.url).to.equal('some url');
 
-                concept = builder
-                    .withImage('some img url', 'some img description')
-                    .build();
-                expect(concept.image.url).to.equal('some img url');
-                expect(concept.audio.url).to.equal('some url'); // audio is still in the builder
-
+                // build the concept starting with init()
                 concept = builder
                     .init()
                     .withThumbnail('', '', '')
                     .build();
+
                 expect(concept.thumbnail).not.to.equal(undefined);
                 expect(concept.image).to.equal(undefined);
                 expect(concept.audio).to.equal(undefined);
@@ -100,5 +97,4 @@
     });
 
 }());
-
 
