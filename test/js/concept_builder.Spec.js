@@ -60,6 +60,18 @@
 
         });
 
+        describe('#withAudio', function () {
+
+            it('sets audio properties to a Concept', function () {
+                var concept = builder
+                    .withAudio('some url')
+                    .build();
+
+                expect(concept.audio.url).to.equal('some url');
+            });
+
+        });
+
     });
 
 }());

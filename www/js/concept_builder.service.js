@@ -4,10 +4,11 @@
 
     app.service('ConceptBuilder', ['Concept', function (Concept) {
         var thumbnail,
-            image;
+            image,
+            audio;
 
         this.build = function () {
-            return new Concept(thumbnail, image, null);
+            return new Concept(thumbnail, image, audio);
         };
 
         this.withThumbnail = function (url, title, description) {
@@ -24,6 +25,14 @@
             image = {
                 url: url,
                 description: description
+            };
+
+            return this;
+        };
+
+        this.withAudio = function (url) {
+            audio = {
+                url: url
             };
 
             return this;
