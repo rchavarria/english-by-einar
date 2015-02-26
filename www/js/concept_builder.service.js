@@ -7,6 +7,11 @@
             image,
             audio;
 
+        this.init = function () {
+            thumbnail = image = audio = undefined;
+            return this;
+        };
+
         this.build = function () {
             return new Concept(thumbnail, image, audio);
         };
