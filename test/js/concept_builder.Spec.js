@@ -33,6 +33,20 @@
 
         });
 
+        describe('#withThumbnail', function () {
+
+            it('sets thumbnail properties to a Concept', function () {
+                var concept = builder
+                    .withThumbnail('some url', 'some title', 'some description')
+                    .build();
+
+                expect(concept.thumbnail.url).to.equal('some url');
+                expect(concept.thumbnail.title).to.equal('some title');
+                expect(concept.thumbnail.description).to.equal('some description');
+            });
+
+        });
+
     });
 
 }());
