@@ -25,7 +25,7 @@
                 expect(ConceptRepository.count()).to.equal(0);
 
                 loader.load();
-                // expect(ConceptRepository.count()).to.be.above(0);
+                expect(ConceptRepository.count()).to.be.above(0);
             });
 
         });

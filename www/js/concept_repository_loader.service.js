@@ -1,10 +1,16 @@
-/*global angular, console*/
+/*global angular*/
 (function (app) {
     'use strict';
 
-    app.service('ConceptRepositoryLoader', [function () {
+    app.service('ConceptRepositoryLoader', ['ConceptBuilder', 'ConceptRepository', function (ConceptBuilder, ConceptRepository) {
         this.load = function () {
-            console.log('');
+            var concept = ConceptBuilder.init()
+                .withThumbnail('dog', 'dog', 'dog')
+                .withImage('dog', 'dog')
+                .withAudio('dog')
+                .build();
+
+            ConceptRepository.addConcept(concept);
         };
     }]);
 
