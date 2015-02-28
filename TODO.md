@@ -3,6 +3,7 @@
 -- test concept ?
 ++ test concept repository
 -- concept builder????
+---- Research chai documentation how to expect when a string starts with some value
 
 # TODO list
 - Write first test about the service that handles EnglishConcepts
