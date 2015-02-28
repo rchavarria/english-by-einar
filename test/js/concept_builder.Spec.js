@@ -67,7 +67,15 @@
                     .withAudio('some url')
                     .build();
 
-                expect(concept.audio.url).to.equal('some url');
+                expect(concept.audio.url).not.to.equal(undefined);
+            });
+
+            it('prefixes a URL with /android_asset/www/ for android platforms', function () {
+                var concept = builder
+                    .withAudio('some url')
+                    .build();
+
+                expect(concept.audio.url).to.equal('/android_assert/www/some url');
             });
 
         });
