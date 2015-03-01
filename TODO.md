@@ -2,8 +2,9 @@
 - Create some kind of factory to create objects that represent every english term, or concept
 -- test concept ?
 ++ test concept repository
--- concept builder????
+++ concept builder????
 ---- Research chai documentation how to expect when a string starts with some value
+-- test concept card controller (now it's on a separate file)
 
 # TODO list
 - Write first test about the service that handles EnglishConcepts
