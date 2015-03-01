@@ -19,6 +19,10 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/concept.factory.js"></script>
+    <script src="js/concept_builder.service.js"></script>
+    <script src="js/concept_repository.factory.js"></script>
+    <script src="js/concept_repository_loader.service.js"></script>
 </head>
 
 <body ng-app="EnglishByEinar">
@@ -26,18 +30,18 @@
       <div class="list card" ng-controller="ConceptCardCtrl">
 
           <div class="item item-avatar">
-              <img ng-src="{{word.thumbnail}}" />
-              <h2>{{word.thumbnailTitle}}</h2>
-              <p>{{word.thumbnailDescription}}</p>
+              <img ng-src="{{word.thumbnail.url}}" />
+              <h2>{{word.thumbnail.title}}</h2>
+              <p>{{word.thumbnail.description}}</p>
           </div>
 
           <div class="item item-body">
-              <img class="full-image" ng-src="{{word.image}}" />
-              <p>{{word.imageDescription}}</p>
+              <img class="full-image" ng-src="{{word.image.url}}" />
+              <p>{{word.image.description}}</p>
           </div>
 
           <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#" ng-click="play(word.audio)">
+              <a class="tab-item" href="#" ng-click="play(word.audio.url)">
                   <i class="icon ion-play"></i>
                   Play
               </a>

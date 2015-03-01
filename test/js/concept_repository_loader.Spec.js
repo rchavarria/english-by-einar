@@ -12,6 +12,7 @@
         beforeEach(inject(function (_ConceptRepositoryLoader_, _ConceptRepository_) {
             loader = _ConceptRepositoryLoader_;
             ConceptRepository = _ConceptRepository_;
+            ConceptRepository.init();
         }));
         /*jslint nomen: false*/
 

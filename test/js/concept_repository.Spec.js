@@ -12,6 +12,7 @@
         beforeEach(inject(function (_Concept_, _ConceptRepository_) {
             Concept = _Concept_;
             repo = _ConceptRepository_;
+            repo.init();
         }));
         /*jslint nomen: false*/
 

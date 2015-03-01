@@ -4,6 +4,8 @@
 
     app.service('ConceptRepositoryLoader', ['ConceptBuilder', 'ConceptRepository', function (ConceptBuilder, ConceptRepository) {
         this.load = function () {
+            ConceptRepository.init();
+
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
                 .withThumbnail('img/small-dog.jpg', 'Dog#1', 'Wouf! Wouf!')

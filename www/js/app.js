@@ -4,7 +4,7 @@
 
     angular.module('EnglishByEinar', ['ionic', 'ngCordova'])
 
-        .run(function ($window, $ionicPlatform) {
+        .run(['$window', '$ionicPlatform', 'ConceptRepositoryLoader', function ($window, $ionicPlatform, ConceptRepositoryLoader) {
             $ionicPlatform.ready(function () {
                 // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
                 // for form inputs)
@@ -14,13 +14,15 @@
                 if ($window.StatusBar) {
                     $window.StatusBar.styleDefault();
                 }
-            });
-        })
 
-        .controller('ConceptCardCtrl', function ($scope, $cordovaMedia, Vocabulary) {
+                ConceptRepositoryLoader.load();
+            });
+        }])
+
+        .controller('ConceptCardCtrl', ['$scope', '$cordovaMedia', 'ConceptRepository', function ($scope, $cordovaMedia, ConceptRepository) {
             var media;
 
-            $scope.word = Vocabulary.next();
+            $scope.word = ConceptRepository.next();
 
             $scope.play = function (src) {
                 if (media) {
@@ -41,10 +43,10 @@
             };
 
             $scope.next = function () {
-                $scope.word = Vocabulary.next();
+                $scope.word = ConceptRepository.next();
             };
 
-        })
+        }])
 
         .factory('Vocabulary', function () {
             var current = 0,
