@@ -46,45 +46,7 @@
                 $scope.word = ConceptRepository.next();
             };
 
-        }])
-
-        .factory('Vocabulary', function () {
-            var current = 0,
-                words = [];
-
-            words.push({
-                thumbnail: 'img/small-dog.jpg',
-                thumbnailTitle: 'Dog#1',
-                thumbnailDescription: 'Wouf! Wouf!',
-                image: 'img/dog.jpg',
-                imageDescription: 'Help your kid to say that in English',
-                audio: '/android_asset/www/audio/some-demo.mp3'
-            });
-            words.push({
-                thumbnail: 'img/small-dog.jpg',
-                thumbnailTitle: 'Dog#2',
-                thumbnailDescription: 'Wouf! Wouf!',
-                image: 'img/dog.jpg',
-                imageDescription: 'Help your kid to say that in English',
-                audio: '/android_asset/www/audio/some-demo.mp3'
-            });
-            words.push({
-                thumbnail: 'img/small-dog.jpg',
-                thumbnailTitle: 'Dog#3',
-                thumbnailDescription: 'Wouf! Wouf!',
-                image: 'img/dog.jpg',
-                imageDescription: 'Help your kid to say that in English',
-                audio: '/android_asset/www/audio/some-demo.mp3'
-            });
-
-            return {
-                next: function () {
-                    var word = words[current];
-                    current = (current + 1) % words.length;
-                    return word;
-                }
-            };
-        });
+        }]);
 
 }());
 
