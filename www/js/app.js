@@ -17,7 +17,7 @@
             });
         })
 
-        .controller('ExampleController', function ($scope, $cordovaMedia, Vocabulary) {
+        .controller('ConceptCardCtrl', function ($scope, $cordovaMedia, Vocabulary) {
             var media;
 
             $scope.word = Vocabulary.next();
