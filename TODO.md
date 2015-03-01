@@ -1,12 +1,14 @@
 # TASKS
 - Create some kind of factory to create objects that represent every english term, or concept
--- test concept ?
+xx test concept ?
 ++ test concept repository
 ++ concept builder????
----- Research chai documentation how to expect when a string starts with some value
--- test concept card controller (now it's on a separate file)
+---- Research chai documentation how to expect when a string starts with some value for ConceptBuilder.withAudio() test that starts with /asset_android/blablabla
 
 # TODO list
+- ConceptCard controller
+-- transform controller is a 'controller as'
+-- test concept card controller (now it's on a separate file)
 - Write first test about the service that handles EnglishConcepts
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests
