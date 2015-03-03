@@ -75,7 +75,7 @@
                     .withAudio('some url')
                     .build();
 
-                expect(concept.audio.url).to.equal('/android_assert/www/some url');
+                expect(concept.audio.url).to.contain('/android_assert/www/');
             });
 
         });
