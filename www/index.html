@@ -24,6 +24,7 @@
     <script src="js/concept_repository.factory.js"></script>
     <script src="js/concept_repository_loader.service.js"></script>
     <script src="js/concept_card.controller.js"></script>
+    <script src="js/concept_media.factory.js"></script>
 </head>
 
 <body ng-app="EnglishByEinar">
@@ -42,7 +43,7 @@
           </div>
 
           <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#" ng-click="card.play(card.word.audio.url)">
+              <a class="tab-item" href="#" ng-click="card.play()">
                   <i class="icon ion-play"></i>
                   Play
               </a>
