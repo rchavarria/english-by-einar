@@ -10,21 +10,21 @@
                 .init()
                 .withThumbnail('img/small-dog.jpg', 'Dog#1', 'Wouf! Wouf!')
                 .withImage('img/dog.jpg', 'Help your kid to say that in English')
-                .withAudio('/android_asset/www/audio/some-demo.mp3')
+                .withAudio('audio/some-demo.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
                 .withThumbnail('img/small-dog.jpg', 'Dog#2', 'Wouf! Wouf!')
                 .withImage('img/dog.jpg', 'Help your kid to say that in English')
-                .withAudio('/android_asset/www/audio/some-demo.mp3')
+                .withAudio('audio/some-demo.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
                 .withThumbnail('img/small-dog.jpg', 'Dog#3', 'Wouf! Wouf!')
                 .withImage('img/dog.jpg', 'Help your kid to say that in English')
-                .withAudio('/android_asset/www/audio/some-demo.mp3')
+                .withAudio('audio/some-demo.mp3')
                 .build());
         };
     }]);
