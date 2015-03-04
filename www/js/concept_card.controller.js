@@ -2,31 +2,23 @@
 (function (app) {
     'use strict';
 
-    app.controller('ConceptCardCtrl', ['$cordovaMedia', 'ConceptRepository', function ($cordovaMedia, ConceptRepository) {
+    app.controller('ConceptCardCtrl', ['ConceptMedia', 'ConceptRepository', function (ConceptMedia, ConceptRepository) {
         var media;
 
         this.word = ConceptRepository.next();
+        media = new ConceptMedia(this.word);
 
-        this.play = function (src) {
-            if (media) {
-                this.stop();
-            }
-
-            media = $cordovaMedia.newMedia(src);
+        this.play = function () {
             media.play();
         };
 
         this.stop = function () {
-            if (!media) {
-                return;
-            }
-
             media.stop();
-            media.release();
         };
 
         this.next = function () {
             this.word = ConceptRepository.next();
+            media = new ConceptMedia(this.word);
         };
 
     }]);

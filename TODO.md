@@ -1,7 +1,7 @@
 # TASKS
 - ConceptCard controller
 ++ transform controller is a 'controller as'
--- Before testing, create a factory that controls play/stop of a media file external to the controller
+++ Before testing, create a factory that controls play/stop of a media file external to the controller
 -- test concept card controller (now it's on a separate file)
 
 # TODO list
