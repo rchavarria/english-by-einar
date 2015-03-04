@@ -1,6 +1,6 @@
 # TASKS
 - ConceptCard controller
--- transform controller is a 'controller as'
+++ transform controller is a 'controller as'
 -- test concept card controller (now it's on a separate file)
 
 # TODO list

@@ -28,25 +28,25 @@
 
 <body ng-app="EnglishByEinar">
 
-      <div class="list card" ng-controller="ConceptCardCtrl">
+      <div class="list card" ng-controller="ConceptCardCtrl as card">
 
           <div class="item item-avatar">
-              <img ng-src="{{word.thumbnail.url}}" />
-              <h2>{{word.thumbnail.title}}</h2>
-              <p>{{word.thumbnail.description}}</p>
+              <img ng-src="{{card.word.thumbnail.url}}" />
+              <h2>{{card.word.thumbnail.title}}</h2>
+              <p>{{card.word.thumbnail.description}}</p>
           </div>
 
           <div class="item item-body">
-              <img class="full-image" ng-src="{{word.image.url}}" />
-              <p>{{word.image.description}}</p>
+              <img class="full-image" ng-src="{{card.word.image.url}}" />
+              <p>{{card.word.image.description}}</p>
           </div>
 
           <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#" ng-click="play(word.audio.url)">
+              <a class="tab-item" href="#" ng-click="card.play(card.word.audio.url)">
                   <i class="icon ion-play"></i>
                   Play
               </a>
-              <a class="tab-item" href="#" ng-click="next()">
+              <a class="tab-item" href="#" ng-click="card.next()">
                   <i class="icon ion-skip-forward"></i>
                   Next
               </a>
