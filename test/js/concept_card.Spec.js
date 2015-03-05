@@ -30,7 +30,7 @@
             });
 
             it('loads a concept', function () {
-                expect(controller.word).not.to.equal(undefined);
+                expect(controller.concept).not.to.equal(undefined);
             });
 
             it('creates a media with the concept', function () {
@@ -42,9 +42,9 @@
         describe('#next', function () {
 
             it('loads a new concept', function () {
-                var oldConcept = controller.word;
+                var oldConcept = controller.concept;
                 controller.next();
-                expect(controller.word).not.to.deep.equal(oldConcept);
+                expect(controller.concept).not.to.deep.equal(oldConcept);
             });
 
             it('creates a new media', function () {
