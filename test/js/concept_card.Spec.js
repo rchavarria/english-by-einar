@@ -47,6 +47,12 @@
                 expect(controller.word).not.to.deep.equal(oldConcept);
             });
 
+            it('creates a new media', function () {
+                var oldMedia = controller.media;
+                controller.next();
+                expect(controller.media).not.to.deep.equal(oldMedia);
+            });
+
         });
 
         describe('#play', function () {
