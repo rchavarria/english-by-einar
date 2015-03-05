@@ -7,6 +7,7 @@
 
         function ConceptMediaConstructor() {
             this.play = sinon.spy();
+            this.stop = sinon.spy();
         }
 
         var ConceptRepositoryLoader,
@@ -53,6 +54,15 @@
             it('invokes ConceptMedia.play() method', function () {
                 controller.play();
                 expect(controller.media.play).to.have.been.calledWith();
+            });
+
+        });
+
+        describe('#stop', function () {
+
+            it('invokes ConceptMedia.stop() method', function () {
+                controller.stop();
+                expect(controller.media.stop).to.have.been.calledWith();
             });
 
         });
