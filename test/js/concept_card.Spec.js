@@ -1,9 +1,13 @@
-/*global describe, beforeEach, afterEach, module, inject, it, expect*/
+/*global sinon, describe, beforeEach, afterEach, module, inject, it, expect*/
 (function () {
     'use strict';
 
     describe('Concept Card Controller', function () {
         beforeEach(module('EnglishByEinar'));
+
+        function ConceptMediaConstructor() {
+            this.play = sinon.spy();
+        }
 
         var ConceptRepositoryLoader,
             controller;
@@ -13,11 +17,7 @@
             ConceptRepositoryLoader = _ConceptRepositoryLoader_;
             ConceptRepositoryLoader.load();
 
-            var ConceptMedia = function () {
-                this.foo = 'bar';
-            };
-
-            controller = $controller('ConceptCardCtrl', { ConceptMedia: ConceptMedia });
+            controller = $controller('ConceptCardCtrl', { ConceptMedia: ConceptMediaConstructor });
         }));
         /*jslint nomen: false*/
 
@@ -32,6 +32,10 @@
                 expect(controller.word).not.to.equal(undefined);
             });
 
+            it('creates a media with the concept', function () {
+                expect(controller.media).not.to.equal(undefined);
+            });
+
         });
 
         describe('#next', function () {
@@ -40,6 +44,15 @@
                 var oldConcept = controller.word;
                 controller.next();
                 expect(controller.word).not.to.deep.equal(oldConcept);
+            });
+
+        });
+
+        describe('#play', function () {
+
+            it('invokes ConceptMedia.play() method', function () {
+                controller.play();
+                expect(controller.media.play).to.have.been.calledWith();
             });
 
         });
