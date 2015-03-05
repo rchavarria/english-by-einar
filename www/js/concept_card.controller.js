@@ -3,8 +3,8 @@
     'use strict';
 
     app.controller('ConceptCardCtrl', ['ConceptMedia', 'ConceptRepository', function (ConceptMedia, ConceptRepository) {
-        this.word = ConceptRepository.next();
-        this.media = new ConceptMedia(this.word);
+        this.concept = ConceptRepository.next();
+        this.media = new ConceptMedia(this.concept);
 
         this.play = function () {
             this.media.play();
@@ -15,8 +15,8 @@
         };
 
         this.next = function () {
-            this.word = ConceptRepository.next();
-            this.media = new ConceptMedia(this.word);
+            this.concept = ConceptRepository.next();
+            this.media = new ConceptMedia(this.concept);
         };
 
     }]);
