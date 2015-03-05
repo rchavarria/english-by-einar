@@ -60,6 +60,7 @@
             it('invokes ConceptMedia.play() method', function () {
                 controller.play();
                 expect(controller.media.play).to.have.been.calledWith();
+                expect(controller.media.stop).not.to.have.been.calledWith();
             });
 
         });
@@ -68,6 +69,7 @@
 
             it('invokes ConceptMedia.stop() method', function () {
                 controller.stop();
+                expect(controller.media.play).not.to.have.been.calledWith();
                 expect(controller.media.stop).to.have.been.calledWith();
             });
 
