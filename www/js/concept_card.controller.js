@@ -2,9 +2,12 @@
 (function (app) {
     'use strict';
 
-    app.controller('ConceptCardCtrl', ['ConceptMedia', 'ConceptRepository', function (ConceptMedia, ConceptRepository) {
-        this.concept = ConceptRepository.next();
-        this.media = new ConceptMedia(this.concept);
+    app.controller('ConceptCardCtrl', ['$scope', 'ConceptMedia', 'ConceptRepository', function ($scope, ConceptMedia, ConceptRepository) {
+        var self = this;
+
+        $scope.$on('Concept loaded event', function () {
+            self.next();
+        });
 
         this.play = function () {
             this.media.play();

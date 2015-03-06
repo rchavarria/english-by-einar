@@ -10,15 +10,21 @@
             this.stop = sinon.spy();
         }
 
-        var ConceptRepositoryLoader,
+        var $rootScope,
+            ConceptRepositoryLoader,
             controller;
 
         /*jslint nomen: true*/
-        beforeEach(inject(function ($controller, _ConceptRepositoryLoader_) {
+        beforeEach(inject(function ($controller, _$rootScope_, _ConceptRepositoryLoader_) {
+            $rootScope = _$rootScope_;
+
             ConceptRepositoryLoader = _ConceptRepositoryLoader_;
             ConceptRepositoryLoader.load();
 
-            controller = $controller('ConceptCardCtrl', { ConceptMedia: ConceptMediaConstructor });
+            controller = $controller('ConceptCardCtrl', {
+                $scope: $rootScope.$new(),
+                ConceptMedia: ConceptMediaConstructor
+            });
         }));
         /*jslint nomen: false*/
 
@@ -29,12 +35,23 @@
                 expect(controller).not.to.equal(undefined);
             });
 
-            it('loads a concept', function () {
-                expect(controller.concept).not.to.equal(undefined);
+            it('does not load a concept', function () {
+                expect(controller.concept).to.equal(undefined);
             });
 
-            it('creates a media with the concept', function () {
-                expect(controller.media).not.to.equal(undefined);
+            it('does not create a media with the concept', function () {
+                expect(controller.media).to.equal(undefined);
+            });
+
+        });
+
+        describe('Concept loaded event', function () {
+
+            it('loads the first concept when is broadcasted', function () {
+                expect(controller.concept).to.equal(undefined);
+
+                $rootScope.$broadcast('Concept loaded event');
+                expect(controller.concept).not.to.equal(undefined);
             });
 
         });
@@ -57,6 +74,10 @@
 
         describe('#play', function () {
 
+            beforeEach(function () {
+                $rootScope.$broadcast('Concept loaded event');
+            });
+
             it('invokes ConceptMedia.play() method', function () {
                 controller.play();
                 expect(controller.media.play).to.have.been.calledWith();
@@ -66,6 +87,10 @@
         });
 
         describe('#stop', function () {
+
+            beforeEach(function () {
+                $rootScope.$broadcast('Concept loaded event');
+            });
 
             it('invokes ConceptMedia.stop() method', function () {
                 controller.stop();
