@@ -4,6 +4,7 @@
 -- listen to that event, and get the next() concept and create a new media from it
 
 # TODO list
+- Figure out how to configure jslint to avoid warnings on chai expectations like ().to.be.null;
 - Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope form ConceptCardCtrl and use this EventBus
 - get some mp3's to play
 - get some images to show, not just a dog
