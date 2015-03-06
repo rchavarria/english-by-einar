@@ -5,7 +5,7 @@
     app.controller('ConceptCardCtrl', ['$scope', 'ConceptMedia', 'ConceptRepository', function ($scope, ConceptMedia, ConceptRepository) {
         var self = this;
 
-        $scope.$on('Concept loaded event', function () {
+        $scope.$on('Concepts loaded event', function () {
             self.next();
         });
 

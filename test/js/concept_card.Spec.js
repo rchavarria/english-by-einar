@@ -45,12 +45,12 @@
 
         });
 
-        describe('Concept loaded event', function () {
+        describe('Concepts loaded event', function () {
 
             it('loads the first concept when is broadcasted', function () {
                 expect(controller.concept).to.equal(undefined);
 
-                $rootScope.$broadcast('Concept loaded event');
+                $rootScope.$broadcast('Concepts loaded event');
                 expect(controller.concept).not.to.equal(undefined);
             });
 
@@ -75,7 +75,7 @@
         describe('#play', function () {
 
             beforeEach(function () {
-                $rootScope.$broadcast('Concept loaded event');
+                $rootScope.$broadcast('Concepts loaded event');
             });
 
             it('invokes ConceptMedia.play() method', function () {
@@ -89,7 +89,7 @@
         describe('#stop', function () {
 
             beforeEach(function () {
-                $rootScope.$broadcast('Concept loaded event');
+                $rootScope.$broadcast('Concepts loaded event');
             });
 
             it('invokes ConceptMedia.stop() method', function () {
