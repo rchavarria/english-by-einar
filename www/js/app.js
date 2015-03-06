@@ -4,7 +4,7 @@
 
     angular.module('EnglishByEinar', ['ionic', 'ngCordova'])
 
-        .run(['$window', '$ionicPlatform', 'ConceptRepositoryLoader', function ($window, $ionicPlatform, ConceptRepositoryLoader) {
+        .run(['$window', '$rootScope', '$ionicPlatform', 'ConceptRepositoryLoader', function ($window, $rootScope, $ionicPlatform, ConceptRepositoryLoader) {
             $ionicPlatform.ready(function () {
                 // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
                 // for form inputs)
@@ -16,6 +16,8 @@
                 }
 
                 ConceptRepositoryLoader.load();
+
+                $rootScope.$broadcast('Concepts loaded event');
             });
         }]);
 
