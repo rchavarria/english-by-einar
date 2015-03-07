@@ -1,5 +1,6 @@
 # TASKS
 - get some mp3's to play
+-- extract at least 5 concepts from the original .wav file (in mp3 format)
 
 # TODO list
 - Figure out how to configure jslint to avoid warnings on chai expectations like ().to.be.null;
