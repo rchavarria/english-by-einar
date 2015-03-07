@@ -18,6 +18,7 @@
                 ConceptRepositoryLoader.load();
 
                 $rootScope.$broadcast('Concepts loaded event');
+                $rootScope.$apply();
             });
         }]);
 
