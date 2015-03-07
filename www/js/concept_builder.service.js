@@ -36,7 +36,7 @@
         };
 
         this.withAudio = function (url) {
-            var prefix = '/android_assert/www/';
+            var prefix = '/android_asset/www/';
             audio = {
                 url: prefix + url
             };
