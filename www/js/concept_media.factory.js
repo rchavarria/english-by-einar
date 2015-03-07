@@ -1,4 +1,4 @@
-/*global angular*/
+/*global angular, console*/
 (function (app) {
     'use strict';
 
@@ -7,7 +7,11 @@
         function ConceptMedia(concept) {
             var media;
             if (concept) {
-                media = $cordovaMedia.newMedia(concept.audio.url);
+                try {
+                    media = $cordovaMedia.newMedia(concept.audio.url);
+                } catch (e) {
+                    console.log('Error creating media with url: ', concept.audio.url);
+                }
             }
 
             this.play = function () {
@@ -33,6 +37,4 @@
     }]);
 
 }(angular.module('EnglishByEinar')));
-
-
 
