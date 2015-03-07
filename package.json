@@ -26,6 +26,9 @@
     "karma-sinon-chai": "~0.3.0"
   },
   "scripts": {
-      "test": "bower install && gulp test"
-  }
+    "test": "bower install && gulp test"
+  },
+  "cordovaPlugins": [
+    "org.apache.cordova.media"
+  ]
 }
