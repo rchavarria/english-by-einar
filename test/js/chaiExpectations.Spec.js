@@ -4,9 +4,6 @@
 
     describe('Chai Expectations', function () {
 
-        beforeEach(function () {
-        });
-
         describe('Not to be null', function () {
 
             it('is not null', function () {
