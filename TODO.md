@@ -8,7 +8,7 @@
 - get some images to show, not just a dog
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests
-- Integrate code coverage with Travis-CI
+- Integrate code coverage with Travis-CI or http://coveralls.io, that seems to work for code coverage metrics
 
 # HOWTO
 - Generate splash screens and icons: http://ionicframework.com/blog/automating-icons-and-splash-screens/
