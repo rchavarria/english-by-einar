@@ -8,36 +8,36 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/small-dog.jpg', 'Dog#1', 'Wouf! Wouf!')
+                .withThumbnail('img/small-dog.jpg', 'Dog', 'Wouf! Wouf!')
                 .withImage('img/dog.jpg', 'Help your kid to say that in English')
                 .withAudio('audio/dog.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/small-dog.jpg', 'Egg', 'Small egg')
-                .withImage('img/dog.jpg', 'Help your kid to say that in English')
+                .withThumbnail('img/egg.jpg', 'Egg', 'Small egg')
+                .withImage('img/egg.jpg', 'Help your kid to say that in English')
                 .withAudio('audio/egg.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/small-dog.jpg', 'Hand', 'Give me five')
-                .withImage('img/dog.jpg', 'Help your kid to say that in English')
+                .withThumbnail('img/hand.jpg', 'Hand', 'Give me five')
+                .withImage('img/hand.jpg', 'Help your kid to say that in English')
                 .withAudio('audio/hand.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/small-dog.jpg', 'Shoes', "Don't forget them")
-                .withImage('img/dog.jpg', 'Help your kid to say that in English')
+                .withThumbnail('img/shoes.png', 'Shoes', "Don't forget them")
+                .withImage('img/shoes.png', 'Help your kid to say that in English')
                 .withAudio('audio/shoes.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/small-dog.jpg', 'T-shirt', 'Wear it!')
-                .withImage('img/dog.jpg', 'Help your kid to say that in English')
+                .withThumbnail('img/tshirt.png', 'T-shirt', 'Wear it!')
+                .withImage('img/tshirt.png', 'Help your kid to say that in English')
                 .withAudio('audio/tshirt.mp3')
                 .build());
         };
