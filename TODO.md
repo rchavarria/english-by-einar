@@ -1,10 +1,11 @@
 # TASKS
-- get some images to show, not just a dog
+- Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
 
 # TODO list
-- Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope form ConceptCardCtrl and use this EventBus
 - Write first test about the service that handles EnglishConcepts
+- Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
 - get more mp3's to play
+- get some images to show, not just a dog
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests
 - Integrate code coverage with Travis-CI
