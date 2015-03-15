@@ -57,7 +57,7 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
-                .withThumbnail('img/trousers.png', 'Trousers', 'Wear it!')
+                .withThumbnail('img/trousers.gif', 'Trousers', 'Wear it!')
                 .withImage('img/trousers.png', 'Help your kid to say that in English')
                 .withAudio('audio/trousers.mp3')
                 .build());
