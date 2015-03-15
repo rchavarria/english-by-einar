@@ -40,6 +40,27 @@
                 .withImage('img/tshirt.png', 'Help your kid to say that in English')
                 .withAudio('audio/tshirt.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withThumbnail('img/hug.png', 'Hug', 'Give me a hug')
+                .withImage('img/hug.png', 'Help your kid to say that in English')
+                .withAudio('audio/hug.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withThumbnail('img/mum.png', 'Mum', 'She loves you')
+                .withImage('img/mum.png', 'Help your kid to say that in English')
+                .withAudio('audio/mum.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withThumbnail('img/trousers.png', 'Trousers', 'Wear it!')
+                .withImage('img/trousers.png', 'Help your kid to say that in English')
+                .withAudio('audio/trousers.mp3')
+                .build());
         };
     }]);
 
