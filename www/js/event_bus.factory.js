@@ -10,6 +10,10 @@
                 this.subscribers[eventName] = [];
                 this.subscribers[eventName].push(callback);
             };
+
+            this.publish = function (eventName, callbackArgument) {
+                this.subscribers[eventName][0](callbackArgument);
+            };
         }
 
         return new EventBus();

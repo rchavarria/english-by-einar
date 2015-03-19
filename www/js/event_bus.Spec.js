@@ -30,6 +30,18 @@
                 expect(EventBus.subscribers[eventName]).to.have.length(1);
             });
 
+            it('stores the callback that will be called with #publish', function () {
+                var callbackHasBeenCalled = false;
+                function callback(callbackArgument) {
+                    expect(callbackArgument).to.equal('some argument');
+                    callbackHasBeenCalled = true;
+                }
+
+                EventBus.subscribe('event#1', callback);
+                EventBus.publish('event#1', 'some argument');
+                expect(callbackHasBeenCalled).to.equal(true);
+            });
+
         });
 
     });
