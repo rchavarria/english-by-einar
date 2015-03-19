@@ -22,6 +22,16 @@
 
         });
 
+        describe('#subscribe', function () {
+
+            it('adds a callback to the subscribers object sorted by event name', function () {
+                var eventName = 'some event name';
+                EventBus.subscribe(eventName, function () { return; });
+                expect(EventBus.subscribers[eventName]).to.have.length(1);
+            });
+
+        });
+
     });
 
 }());
