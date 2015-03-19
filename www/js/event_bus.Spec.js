@@ -30,6 +30,14 @@
                 expect(EventBus.subscribers[eventName]).to.have.length(1);
             });
 
+            it('stores more than one callback for the same event', function () {
+                expect(1).to.equal(1);
+            });
+
+            it('stores callbacks for different events', function () {
+                expect(1).to.equal(1);
+            });
+
             it('stores the callback that will be called with #publish', function () {
                 var callbackHasBeenCalled = false;
                 function callback(callbackArgument) {
