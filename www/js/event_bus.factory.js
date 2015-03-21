@@ -12,12 +12,15 @@
             };
 
             this.publish = function (eventName, callbackArgument) {
-                var callbacks = this.subscribers[eventName];
+                var i,
+                    callbacks = this.subscribers[eventName];
                 if (!callbacks) {
                     return;
                 }
 
-                callbacks[0](callbackArgument);
+                for (i = 0; i < callbacks.length; i += 1) {
+                    callbacks[i](callbackArgument);
+                }
             };
         }
 

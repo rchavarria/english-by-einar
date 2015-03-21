@@ -66,6 +66,20 @@
                 expect(callbackHasBeenCalled).to.equal(true);
             });
 
+            it('invokes to all callbacks registered', function () {
+                var count = 0;
+                function callback() {
+                    count += 1;
+                }
+
+                EventBus.subscribe('event#1', callback);
+                EventBus.subscribe('event#1', callback);
+                EventBus.subscribe('event#1', callback);
+
+                EventBus.publish('event#1', {});
+                expect(count).to.equal(3);
+            });
+
         });
 
     });
