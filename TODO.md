@@ -1,10 +1,8 @@
 # TASKS
-- Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
-    - Remove thumbnail object inside Concept entity -> update UI accordingly
 
 # TODO list
 - get more mp3s to play
-- get some images to show
+- get some images to show (1000x1000 px)
 - Publish the app into Google Play Store (need find big images, big icons, some copy advertising the app, the private and pwd to sign the .apk,...)
 - Use [ESLint](http://davidwalsh.name/eslint) to lint JavaScript code
 - Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
@@ -21,6 +19,7 @@
 - Generate splash screens and icons: http://ionicframework.com/blog/automating-icons-and-splash-screens/
 
 # DONE
++ Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
 x Figure out how to configure jslint to avoid warnings on chai expectations like ().to.be.null; It seems jslint can't be configured to do so. There is a big discussion on chai's github, and it seems chai's authors don't want to change it (https://github.com/chaijs/chai/issues/41). dirty-chai and karma-dirty-chai promise to work in a good way, but I wasn't able to make it run.
 + get some mp3's to play
 + Research if there is a way to prevent creating a Media object in a browser, where it fails, if not, there is no way to test the app in a regular browser
