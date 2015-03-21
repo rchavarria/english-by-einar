@@ -18,6 +18,10 @@ module.exports = function(config) {
             'www/lib/ionic/js/ionic.bundle.js',
             'www/lib/ngCordova/dist/ng-cordova.js',
             'www/lib/angular-mocks/angular-mocks.js',
+            'www/lib/lodash/lodash.min.js',
+
+            // init karma with some specific script
+            'test/init.js',
 
             // production code
             'www/js/**/*.js',
