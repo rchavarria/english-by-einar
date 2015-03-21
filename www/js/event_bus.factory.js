@@ -12,19 +12,14 @@
             };
 
             this.publish = function (eventName, callbackArgument) {
-                var i,
-                    callbacks = this.subscribers[eventName];
+                var callbacks = this.subscribers[eventName];
                 if (!callbacks) {
                     return;
                 }
 
-                lodash.each(callbacks, function (c) {
-                    console.log(c);
+                lodash.each(callbacks, function (callback) {
+                    callback(callbackArgument);
                 });
-
-                for (i = 0; i < callbacks.length; i += 1) {
-                    callbacks[i](callbackArgument);
-                }
             };
         }
 
