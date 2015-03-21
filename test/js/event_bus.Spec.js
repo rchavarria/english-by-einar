@@ -50,6 +50,10 @@
 
         describe('#publish', function () {
 
+            it('does not fail if there is no callback registered for an event', function () {
+                EventBus.publish('event#1', 'some argument');
+            });
+
             it('invokes callbacks stored with #subscribe', function () {
                 var callbackHasBeenCalled = false;
                 function callback(callbackArgument) {

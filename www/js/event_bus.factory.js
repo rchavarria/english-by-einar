@@ -12,7 +12,12 @@
             };
 
             this.publish = function (eventName, callbackArgument) {
-                this.subscribers[eventName][0](callbackArgument);
+                var callbacks = this.subscribers[eventName];
+                if (!callbacks) {
+                    return;
+                }
+
+                callbacks[0](callbackArgument);
             };
         }
 
