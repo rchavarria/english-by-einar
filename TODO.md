@@ -1,5 +1,6 @@
 # TASKS
 - Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
+    - Remove thumbnail object inside Concept entity -> update UI accordingly
 
 # TODO list
 - get more mp3s to play
@@ -9,6 +10,9 @@
 - Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
     + Remove $scope and $rootScope from ConceptCardCtrl and use this EventBus
     - Add an #unsubscribe() method
+    - Remove duplication in the name of the event. Event names could be in a variable inside EventBus factory
+    - Make this.subscribers property private
+- Format code and use best AngularJS practices by John Papa
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests
 - Integrate code coverage with Travis-CI or http://coveralls.io, that seems to work for code coverage metrics
