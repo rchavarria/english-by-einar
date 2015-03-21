@@ -25,13 +25,13 @@
         describe('#subscribe', function () {
 
             it('adds a callback to the subscribers object sorted by event name', function () {
-                var eventName = 'some event name';
+                var eventName = 'event#1';
                 EventBus.subscribe(eventName, function () { return; });
                 expect(EventBus.subscribers[eventName]).to.have.length(1);
             });
 
             it('stores more than one callback for the same event', function () {
-                var eventName = 'some event name';
+                var eventName = 'event#1';
                 EventBus.subscribe(eventName, function () { return; });
                 EventBus.subscribe(eventName, function () { return; });
                 EventBus.subscribe(eventName, function () { return; });
@@ -39,7 +39,11 @@
             });
 
             it('stores callbacks for different events', function () {
-                expect(1).to.equal(1);
+                EventBus.subscribe('event#1', function () { return; });
+                expect(EventBus.subscribers['event#1']).to.have.length(1);
+
+                EventBus.subscribe('event#2', function () { return; });
+                expect(EventBus.subscribers['event#2']).to.have.length(1);
             });
 
             it('stores the callback that will be called with #publish', function () {
