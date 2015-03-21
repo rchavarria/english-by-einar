@@ -12,11 +12,14 @@
 
         var $rootScope,
             ConceptRepositoryLoader,
+            EventBus,
             controller;
 
         /*jslint nomen: true*/
-        beforeEach(inject(function ($controller, _$rootScope_, _ConceptRepositoryLoader_) {
+        beforeEach(inject(function ($controller, _$rootScope_, _ConceptRepositoryLoader_, _EventBus_) {
             $rootScope = _$rootScope_;
+
+            EventBus = _EventBus_;
 
             ConceptRepositoryLoader = _ConceptRepositoryLoader_;
             ConceptRepositoryLoader.load();
@@ -51,6 +54,13 @@
                 expect(controller.concept).to.equal(undefined);
 
                 $rootScope.$broadcast('Concepts loaded event');
+                expect(controller.concept).not.to.equal(undefined);
+            });
+
+            it('loads the first concept when is published through the EventBus', function () {
+                expect(controller.concept).to.equal(undefined);
+
+                EventBus.publish('Concepts loaded event');
                 expect(controller.concept).not.to.equal(undefined);
             });
 
