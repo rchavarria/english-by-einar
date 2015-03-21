@@ -68,9 +68,7 @@
 
             it('invokes to all callbacks registered', function () {
                 var count = 0;
-                function callback() {
-                    count += 1;
-                }
+                function callback() { count += 1; }
 
                 EventBus.subscribe('event#1', callback);
                 EventBus.subscribe('event#1', callback);
