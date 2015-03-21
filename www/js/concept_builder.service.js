@@ -6,7 +6,8 @@
         var thumbnail,
             image,
             audio,
-            title;
+            title,
+            description;
 
         this.init = function () {
             thumbnail = image = audio = undefined;
@@ -14,7 +15,7 @@
         };
 
         this.build = function () {
-            return new Concept(thumbnail, image, audio, title);
+            return new Concept(thumbnail, image, audio, title, description);
         };
 
         this.withThumbnail = function (url, title, description) {
@@ -29,6 +30,11 @@
 
         this.withTitle = function (newTitle) {
             title = newTitle;
+            return this;
+        };
+
+        this.withDescription = function (newDescription) {
+            description = newDescription;
             return this;
         };
 
