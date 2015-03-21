@@ -5,7 +5,8 @@
     app.service('ConceptBuilder', ['Concept', function (Concept) {
         var thumbnail,
             image,
-            audio;
+            audio,
+            title;
 
         this.init = function () {
             thumbnail = image = audio = undefined;
@@ -13,7 +14,7 @@
         };
 
         this.build = function () {
-            return new Concept(thumbnail, image, audio);
+            return new Concept(thumbnail, image, audio, title);
         };
 
         this.withThumbnail = function (url, title, description) {
@@ -23,6 +24,11 @@
                 description: description
             };
 
+            return this;
+        };
+
+        this.withTitle = function (newTitle) {
+            title = newTitle;
             return this;
         };
 

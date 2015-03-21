@@ -3,7 +3,8 @@
     'use strict';
 
     app.factory('Concept', function () {
-        function Concept(thumbnail, image, audio) {
+        function Concept(thumbnail, image, audio, title) {
+            this.title = title;
             this.thumbnail = thumbnail;
             this.image = image;
             this.audio = audio;
