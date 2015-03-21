@@ -1,15 +1,14 @@
 # TASKS
-- Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
-    - Remove $scope and $rootScope from ConceptCardCtrl and use this EventBus
-    - Add an #unsubscribe() method
+- Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
 
 # TODO list
-- Write first test about the service that handles EnglishConcepts
-- Redesign the card UI: one single image, bigger font, bigger buttons, a big header,...
+- get more mp3s to play
+- get some images to show
 - Publish the app into Google Play Store (need find big images, big icons, some copy advertising the app, the private and pwd to sign the .apk,...)
-- get more mp3's to play
-- get some images to show, not just a dog
 - Use [ESLint](http://davidwalsh.name/eslint) to lint JavaScript code
+- Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
+    + Remove $scope and $rootScope from ConceptCardCtrl and use this EventBus
+    - Add an #unsubscribe() method
 - At some point in the future, concat all js files, ¿minimize them?, and include just one file in www/index.html
 - Compute code coveraged by tests
 - Integrate code coverage with Travis-CI or http://coveralls.io, that seems to work for code coverage metrics
