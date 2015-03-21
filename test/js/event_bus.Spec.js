@@ -31,7 +31,11 @@
             });
 
             it('stores more than one callback for the same event', function () {
-                expect(1).to.equal(1);
+                var eventName = 'some event name';
+                EventBus.subscribe(eventName, function () { return; });
+                EventBus.subscribe(eventName, function () { return; });
+                EventBus.subscribe(eventName, function () { return; });
+                expect(EventBus.subscribers[eventName]).to.have.length(3);
             });
 
             it('stores callbacks for different events', function () {

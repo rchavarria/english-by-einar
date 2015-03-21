@@ -7,7 +7,7 @@
             this.subscribers = {};
 
             this.subscribe = function (eventName, callback) {
-                this.subscribers[eventName] = [];
+                this.subscribers[eventName] = this.subscribers[eventName] || [];
                 this.subscribers[eventName].push(callback);
             };
 
