@@ -17,8 +17,13 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <!-- lodash library -->
+    <script src="lib/lodash/lodash.min.js"></script>
+
     <!-- your app's js -->
+    <script src="js/init_libraries.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/event_bus.factory.js"></script>
     <script src="js/concept.factory.js"></script>
     <script src="js/concept_builder.service.js"></script>
     <script src="js/concept_repository.factory.js"></script>
@@ -31,10 +36,14 @@
 
       <div class="list card" ng-controller="ConceptCardCtrl as card">
 
-          <div class="item item-avatar">
-              <img ng-src="{{card.concept.thumbnail.url}}" />
-              <h2>{{card.concept.thumbnail.title}}</h2>
-              <p>{{card.concept.thumbnail.description}}</p>
+          <!-- <div class="item item-avatar"> -->
+          <!--     <img ng-src="{{card.concept.thumbnail.url}}" /> -->
+          <!--     <h2>{{card.concept.thumbnail.title}}</h2> -->
+          <!--     <p>{{card.concept.thumbnail.description}}</p> -->
+          <!-- </div> -->
+
+          <div class="item item-divider">
+              {{card.concept.thumbnail.title}}
           </div>
 
           <div class="item item-body">
