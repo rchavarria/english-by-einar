@@ -1,5 +1,7 @@
 # TASKS
 - Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
+    - Remove $scope and $rootScope from ConceptCardCtrl and use this EventBus
+    - Add an #unsubscribe() method
 
 # TODO list
 - Write first test about the service that handles EnglishConcepts
