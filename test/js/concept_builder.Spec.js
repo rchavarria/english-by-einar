@@ -33,20 +33,6 @@
 
         });
 
-        describe('#withThumbnail', function () {
-
-            it('sets thumbnail properties to a Concept', function () {
-                var concept = builder
-                    .withThumbnail('some url', 'some title', 'some description')
-                    .build();
-
-                expect(concept.thumbnail.url).to.equal('some url');
-                expect(concept.thumbnail.title).to.equal('some title');
-                expect(concept.thumbnail.description).to.equal('some description');
-            });
-
-        });
-
         describe('#withTitle', function () {
 
             it('sets Concept title', function () {
@@ -108,7 +94,8 @@
 
             it('resets all Concept cached properties', function () {
                 var concept = builder
-                    .withThumbnail('', '', '')
+                    .withTitle('')
+                    .withDescription('')
                     .withImage('', '')
                     .withAudio('')
                     .build();
@@ -116,11 +103,12 @@
                 // build the concept starting with init()
                 concept = builder
                     .init()
-                    .withThumbnail('', '', '')
+                    .withImage('', '')
                     .build();
 
-                expect(concept.thumbnail).not.to.equal(undefined);
-                expect(concept.image).to.equal(undefined);
+                expect(concept.image).not.to.equal(undefined);
+                expect(concept.title).to.equal(undefined);
+                expect(concept.description).to.equal(undefined);
                 expect(concept.audio).to.equal(undefined);
             });
 

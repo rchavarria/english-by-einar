@@ -3,29 +3,18 @@
     'use strict';
 
     app.service('ConceptBuilder', ['Concept', function (Concept) {
-        var thumbnail,
-            image,
+        var image,
             audio,
             title,
             description;
 
         this.init = function () {
-            thumbnail = image = audio = undefined;
+            audio = title = description = undefined;
             return this;
         };
 
         this.build = function () {
-            return new Concept(thumbnail, image, audio, title, description);
-        };
-
-        this.withThumbnail = function (url, title, description) {
-            thumbnail = {
-                url: url,
-                title: title,
-                description: description
-            };
-
-            return this;
+            return new Concept(title, description, image, audio);
         };
 
         this.withTitle = function (newTitle) {
