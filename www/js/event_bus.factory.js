@@ -13,10 +13,6 @@
 
             this.publish = function (eventName, callbackArgument) {
                 var callbacks = this.subscribers[eventName];
-                if (!callbacks) {
-                    return;
-                }
-
                 lodash.each(callbacks, function (callback) {
                     callback(callbackArgument);
                 });
