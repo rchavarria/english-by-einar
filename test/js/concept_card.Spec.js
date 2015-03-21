@@ -10,22 +10,18 @@
             this.stop = sinon.spy();
         }
 
-        var $rootScope,
-            ConceptRepositoryLoader,
+        var ConceptRepositoryLoader,
             EventBus,
             controller;
 
         /*jslint nomen: true*/
-        beforeEach(inject(function ($controller, _$rootScope_, _ConceptRepositoryLoader_, _EventBus_) {
-            $rootScope = _$rootScope_;
-
+        beforeEach(inject(function ($controller, _ConceptRepositoryLoader_, _EventBus_) {
             EventBus = _EventBus_;
 
             ConceptRepositoryLoader = _ConceptRepositoryLoader_;
             ConceptRepositoryLoader.load();
 
             controller = $controller('ConceptCardCtrl', {
-                $scope: $rootScope.$new(),
                 ConceptMedia: ConceptMediaConstructor
             });
         }));
@@ -49,13 +45,6 @@
         });
 
         describe('Concepts loaded event', function () {
-
-            it('loads the first concept when is broadcasted', function () {
-                expect(controller.concept).to.equal(undefined);
-
-                $rootScope.$broadcast('Concepts loaded event');
-                expect(controller.concept).not.to.equal(undefined);
-            });
 
             it('loads the first concept when is published through the EventBus', function () {
                 expect(controller.concept).to.equal(undefined);
@@ -85,7 +74,7 @@
         describe('#play', function () {
 
             beforeEach(function () {
-                $rootScope.$broadcast('Concepts loaded event');
+                EventBus.publish('Concepts loaded event');
             });
 
             it('invokes ConceptMedia.play() method', function () {
@@ -99,7 +88,7 @@
         describe('#stop', function () {
 
             beforeEach(function () {
-                $rootScope.$broadcast('Concepts loaded event');
+                EventBus.publish('Concepts loaded event');
             });
 
             it('invokes ConceptMedia.stop() method', function () {

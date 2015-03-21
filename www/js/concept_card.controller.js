@@ -2,12 +2,8 @@
 (function (app) {
     'use strict';
 
-    app.controller('ConceptCardCtrl', ['$scope', 'ConceptMedia', 'ConceptRepository', 'EventBus', function ($scope, ConceptMedia, ConceptRepository, EventBus) {
+    app.controller('ConceptCardCtrl', ['ConceptMedia', 'ConceptRepository', 'EventBus', function (ConceptMedia, ConceptRepository, EventBus) {
         var self = this;
-
-        $scope.$on('Concepts loaded event', function () {
-            self.next();
-        });
 
         EventBus.subscribe('Concepts loaded event', function () {
             self.next();
