@@ -46,7 +46,11 @@
                 expect(EventBus.subscribers['event#2']).to.have.length(1);
             });
 
-            it('stores the callback that will be called with #publish', function () {
+        });
+
+        describe('#publish', function () {
+
+            it('invokes callbacks stored with #subscribe', function () {
                 var callbackHasBeenCalled = false;
                 function callback(callbackArgument) {
                     expect(callbackArgument).to.equal('some argument');
