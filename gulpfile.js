@@ -72,6 +72,12 @@
             configFile: __dirname + '/karma.conf.js'
         }, done);
     });
+
+    gulp.task('test-no-lint', function (done) {
+        karma.start({
+            configFile: __dirname + '/karma.conf.js'
+        }, done);
+    });
     /*jslint nomen: false*/
 
 }());
