@@ -36,12 +36,6 @@
 
       <div class="list card" ng-controller="ConceptCardCtrl as card">
 
-          <!-- <div class="item item-avatar"> -->
-          <!--     <img ng-src="{{card.concept.thumbnail.url}}" /> -->
-          <!--     <h2>{{card.concept.thumbnail.title}}</h2> -->
-          <!--     <p>{{card.concept.thumbnail.description}}</p> -->
-          <!-- </div> -->
-
           <div class="item item-divider">
               {{card.concept.thumbnail.title}}
           </div>
@@ -51,19 +45,14 @@
               <p>{{card.concept.image.description}}</p>
           </div>
 
-          <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#" ng-click="card.play()">
-                  <i class="icon ion-play"></i>
-                  Play
-              </a>
-              <a class="tab-item" href="#" ng-click="card.next()">
-                  <i class="icon ion-skip-forward"></i>
-                  Next
-              </a>
-              <a class="tab-item" href="#">
-                  <i class="icon ion-help-circled"></i>
-                  Help
-              </a>
+          <div class="item item-icon-left">
+              <i class="icon ion-play"></i>
+              Play
+          </div>
+
+          <div class="item item-icon-left">
+              <i class="icon ion-skip-forward"></i>
+              Next
           </div>
 
     </div>
