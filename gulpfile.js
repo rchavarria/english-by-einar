@@ -58,7 +58,7 @@
 
     gulp.task('jslint', function () {
         return gulp
-            .src(['gulpfile.js', 'www/js/**/*.js', 'test/js/**/*.js'])
+            .src(['gulpfile.js', '!www/js/init_libraries.js', 'www/js/**/*.js', 'test/js/**/*.js'])
             .pipe(jslint({
                 global: ['console', 'module', 'require', 'describe', 'it', 'expect', 'angular']
             }))

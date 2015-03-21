@@ -20,8 +20,8 @@ module.exports = function(config) {
             'www/lib/angular-mocks/angular-mocks.js',
             'www/lib/lodash/lodash.min.js',
 
-            // init karma with some specific script
-            'test/init.js',
+            // init some libraries
+            'www/js/init_libraries.js',
 
             // production code
             'www/js/**/*.js',
