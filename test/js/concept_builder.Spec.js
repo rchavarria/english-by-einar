@@ -61,11 +61,10 @@
 
             it('sets image properties to a Concept', function () {
                 var concept = builder
-                    .withImage('some url', 'some description')
+                    .withImage('some url')
                     .build();
 
                 expect(concept.image.url).to.equal('some url');
-                expect(concept.image.description).to.equal('some description');
             });
 
         });
@@ -96,14 +95,14 @@
                 var concept = builder
                     .withTitle('')
                     .withDescription('')
-                    .withImage('', '')
+                    .withImage('')
                     .withAudio('')
                     .build();
 
                 // build the concept starting with init()
                 concept = builder
                     .init()
-                    .withImage('', '')
+                    .withImage('')
                     .build();
 
                 expect(concept.image).not.to.equal(undefined);

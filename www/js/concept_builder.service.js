@@ -27,10 +27,9 @@
             return this;
         };
 
-        this.withImage = function (url, description) {
+        this.withImage = function (url) {
             image = {
-                url: url,
-                description: description
+                url: url
             };
 
             return this;
@@ -47,5 +46,4 @@
     }]);
 
 }(angular.module('EnglishByEinar')));
-
 

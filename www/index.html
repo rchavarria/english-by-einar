@@ -37,12 +37,12 @@
       <div class="list card" ng-controller="ConceptCardCtrl as card">
 
           <div class="item item-divider">
-              {{card.concept.thumbnail.title}}
+              {{card.concept.title}}
           </div>
 
           <div class="item item-body">
               <img class="full-image" ng-src="{{card.concept.image.url}}" />
-              <p>{{card.concept.image.description}}</p>
+              <p>{{card.concept.description}}</p>
           </div>
 
           <div class="item item-icon-left" ng-click="card.play()">
