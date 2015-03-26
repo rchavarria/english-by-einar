@@ -69,6 +69,14 @@
                 .withImage('img/trousers.gif')
                 .withAudio('audio/trousers.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Duck')
+                .withDescription('Cuak! Cuak!')
+                .withImage('img/duck.png')
+                .withAudio('audio/duck.mp3')
+                .build());
         };
     }]);
 
