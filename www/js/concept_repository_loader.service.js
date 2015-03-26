@@ -109,6 +109,14 @@
                 .withImage('img/ant.png')
                 .withAudio('audio/ant.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Jumper')
+                .withDescription('Mum! I can put on my jumper')
+                .withImage('img/jumper.png')
+                .withAudio('audio/jumper.mp3')
+                .build());
         };
     }]);
 
