@@ -1,9 +1,11 @@
 # TASKS
+- Publish the app into Google Play Store (need find big images, big icons, some copy advertising the app, the private and pwd to sign the .apk,...)
+    - http://ionicframework.com/docs/guide/publishing.html
+    - Seems easy: `cordova build --release android`. Then, sign the .apk and align it. Then, Google Play issues
 
 # TODO list
 - get more mp3s to play
 - get some images to show (1000x1000 px)
-- Publish the app into Google Play Store (need find big images, big icons, some copy advertising the app, the private and pwd to sign the .apk,...)
 - Use [ESLint](http://davidwalsh.name/eslint) to lint JavaScript code
 - Create a service to work as an EventBus, with publish and subscribe methods: https://github.com/vladgurovich/angular-event-aggregator/blob/master/angular-event-aggregator.js. Then, remove the $scope and $rootScope from ConceptCardCtrl and use this EventBus
     + Remove $scope and $rootScope from ConceptCardCtrl and use this EventBus
