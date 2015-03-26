@@ -85,6 +85,14 @@
                 .withImage('img/jump.png')
                 .withAudio('audio/jump.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Nut')
+                .withDescription('Nuts make squirrels strong')
+                .withImage('img/nut.png')
+                .withAudio('audio/nut.mp3')
+                .build());
         };
     }]);
 
