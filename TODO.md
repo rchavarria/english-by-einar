@@ -4,6 +4,7 @@
     - Seems easy: `cordova build --release android`. Then, sign the .apk and align it. Then, Google Play issues
 
 # TODO list
+- Take a look to a new library for PubSub events and topics (replace my implementation with that)
 - get more mp3s to play
 - get some images to show (1000x1000 px)
 - Use [ESLint](http://davidwalsh.name/eslint) to lint JavaScript code
