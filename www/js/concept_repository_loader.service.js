@@ -101,6 +101,14 @@
                 .withImage('img/sun.png')
                 .withAudio('audio/sun.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Ant')
+                .withDescription('Ants are awesome')
+                .withImage('img/ant.png')
+                .withAudio('audio/ant.mp3')
+                .build());
         };
     }]);
 
