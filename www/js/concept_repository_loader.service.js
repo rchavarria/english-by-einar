@@ -77,6 +77,14 @@
                 .withImage('img/duck.png')
                 .withAudio('audio/duck.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Jump')
+                .withDescription('Jump to the moon')
+                .withImage('img/jump.png')
+                .withAudio('audio/jump.mp3')
+                .build());
         };
     }]);
 
