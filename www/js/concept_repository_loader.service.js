@@ -93,6 +93,14 @@
                 .withImage('img/nut.png')
                 .withAudio('audio/nut.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Sun')
+                .withDescription('You are brighter than the sun')
+                .withImage('img/sun.png')
+                .withAudio('audio/sun.mp3')
+                .build());
         };
     }]);
 
