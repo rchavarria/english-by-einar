@@ -34,3 +34,7 @@ node_modules
 platforms/
 plugins/
 
+# Scritps to sign and align the .apk file
+sign-and-align.sh
+Signed-and-Aligned.apk
+
