@@ -12,4 +12,10 @@ A hybrid application for Android to learn English with Einar
 
 # How to run
 
+# How to publish
+
+### Build the app
+
+    cordova build --release android
+
 # References
