@@ -32,6 +32,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Policeman')
+                .withDescription('The policeman says: Stop!')
+                .withImage('img/policeman.png')
+                .withAudio('audio/policeman.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Shoes')
                 .withDescription("Don't forget them")
                 .withImage('img/shoes.png')
@@ -56,6 +64,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Traffic sign')
+                .withDescription('One must obbey traffic signs')
+                .withImage('img/traffic-sign.png')
+                .withAudio('audio/traffic-sign.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Mum')
                 .withDescription('She loves you')
                 .withImage('img/mum.png')
@@ -68,6 +84,14 @@
                 .withDescription('Wear them!')
                 .withImage('img/trousers.gif')
                 .withAudio('audio/trousers.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Bench')
+                .withDescription('Can we sit on that bench?')
+                .withImage('img/bench.png')
+                .withAudio('audio/bench.mp3')
                 .build());
 
             ConceptRepository.addConcept(ConceptBuilder
@@ -96,6 +120,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Traffic sign')
+                .withDescription('One must obbey traffic signs')
+                .withImage('img/traffic-sign.png')
+                .withAudio('audio/traffic-sign.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Sun')
                 .withDescription('You are brighter than the sun')
                 .withImage('img/sun.png')
@@ -116,38 +148,6 @@
                 .withDescription('Mum! I can put on my jumper')
                 .withImage('img/jumper.png')
                 .withAudio('audio/jumper.mp3')
-                .build());
-
-            ConceptRepository.addConcept(ConceptBuilder
-                .init()
-                .withTitle('Bench')
-                .withDescription('Can we sit on that bench?')
-                .withImage('img/bench.png')
-                .withAudio('audio/bench.mp3')
-                .build());
-
-            ConceptRepository.addConcept(ConceptBuilder
-                .init()
-                .withTitle('Traffic sign')
-                .withDescription('One must obbey traffic signs')
-                .withImage('img/traffic-sign.png')
-                .withAudio('audio/traffic-sign.mp3')
-                .build());
-
-            ConceptRepository.addConcept(ConceptBuilder
-                .init()
-                .withTitle('Shop')
-                .withDescription('Let\'s go to the shop!')
-                .withImage('img/shop.png')
-                .withAudio('audio/shop.mp3')
-                .build());
-
-            ConceptRepository.addConcept(ConceptBuilder
-                .init()
-                .withTitle('Policeman')
-                .withDescription('The policeman says: Stop!')
-                .withImage('img/policeman.png')
-                .withAudio('audio/policeman.mp3')
                 .build());
         };
     }]);
