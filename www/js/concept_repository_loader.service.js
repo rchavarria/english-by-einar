@@ -133,6 +133,14 @@
                 .withImage('img/traffic-sign.png')
                 .withAudio('audio/traffic-sign.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Shop')
+                .withDescription('Let\'s go to the shop!')
+                .withImage('img/shop.png')
+                .withAudio('audio/shop.mp3')
+                .build());
         };
     }]);
 
