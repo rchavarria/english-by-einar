@@ -141,6 +141,14 @@
                 .withImage('img/shop.png')
                 .withAudio('audio/shop.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Policeman')
+                .withDescription('The policeman says: Stop!')
+                .withImage('img/policeman.png')
+                .withAudio('audio/policeman.mp3')
+                .build());
         };
     }]);
 
