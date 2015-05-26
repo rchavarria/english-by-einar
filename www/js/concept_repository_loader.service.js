@@ -117,6 +117,14 @@
                 .withImage('img/jumper.png')
                 .withAudio('audio/jumper.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Bench')
+                .withDescription('Can we sit on that bench?')
+                .withImage('img/bench.png')
+                .withAudio('audio/bench.mp3')
+                .build());
         };
     }]);
 
