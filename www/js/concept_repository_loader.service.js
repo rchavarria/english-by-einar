@@ -125,6 +125,14 @@
                 .withImage('img/bench.png')
                 .withAudio('audio/bench.mp3')
                 .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
+                .withTitle('Traffic sign')
+                .withDescription('One must obbey traffic signs')
+                .withImage('img/traffic-sign.png')
+                .withAudio('audio/traffic-sign.mp3')
+                .build());
         };
     }]);
 
