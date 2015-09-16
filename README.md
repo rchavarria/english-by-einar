@@ -24,6 +24,18 @@ In a device or emulator: `ionic run -c -s`.
 
 ### Build the app
 
-    cordova build --release android
+`cordova build --release android`
+
+First, you have to build the Ionic app:
+
+`ionic build --release android` build an .apk file to `platforms/android/ant-build/Cordova-App-release-unsigned.apk`. It's very important the `--release` flag, to be able to publish it in the Android Market.
+
+### Sign the `.apk` and align it
+
+Run the bash script provided:
+
+`./sign-and-align.sh`
+
+
 
 # References
