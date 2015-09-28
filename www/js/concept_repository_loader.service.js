@@ -10,7 +10,7 @@
                 .init()
                 .withTitle('Dog')
                 .withDescription('Wouf! Wouf!')
-                .withImage('img/dog.jpg')
+                .withImage('img/dog.png')
                 .withAudio('audio/dog.mp3')
                 .build());
 
@@ -18,7 +18,7 @@
                 .init()
                 .withTitle('Egg')
                 .withDescription('Small egg')
-                .withImage('img/egg.jpg')
+                .withImage('img/egg.png')
                 .withAudio('audio/egg.mp3')
                 .build());
 
@@ -26,7 +26,7 @@
                 .init()
                 .withTitle('Hand')
                 .withDescription('Give me five')
-                .withImage('img/hand.jpg')
+                .withImage('img/hand.png')
                 .withAudio('audio/hand.mp3')
                 .build());
 
