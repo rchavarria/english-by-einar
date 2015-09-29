@@ -128,6 +128,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Ambulance')
+                .withDescription('In case of accident, call the ambulance')
+                .withImage('img/ambulance.png')
+                .withAudio('audio/ambulance.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Sun')
                 .withDescription('You are brighter than the sun')
                 .withImage('img/sun.png')
