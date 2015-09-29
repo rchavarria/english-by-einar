@@ -96,6 +96,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Helicopter')
+                .withDescription('Flying and flying around with a helicopter')
+                .withImage('img/helicopter.png')
+                .withAudio('audio/helicopter.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Bench')
                 .withDescription('Can we sit on that bench?')
                 .withImage('img/bench.png')
