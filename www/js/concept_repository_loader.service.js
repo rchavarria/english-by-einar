@@ -168,6 +168,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Dustcart')
+                .withDescription('Everymorning, the dustcart cleans the trash bin')
+                .withImage('img/dustcart.png')
+                .withAudio('audio/dustcart.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Jumper')
                 .withDescription('Mum! I can put on my jumper')
                 .withImage('img/jumper.png')
