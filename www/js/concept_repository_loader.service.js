@@ -104,6 +104,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Bucket')
+                .withDescription('Plancton works in the Chum Bucket')
+                .withImage('img/bucket.png')
+                .withAudio('audio/bucket.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Jump')
                 .withDescription('Jump to the moon')
                 .withImage('img/jump.png')
