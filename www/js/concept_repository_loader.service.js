@@ -56,6 +56,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Bus')
+                .withDescription('Do you go to school by bus?')
+                .withImage('img/bus.png')
+                .withAudio('audio/bus.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Hug')
                 .withDescription('Give me a hug')
                 .withImage('img/hug.png')
