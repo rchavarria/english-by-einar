@@ -88,6 +88,14 @@
 
             ConceptRepository.addConcept(ConceptBuilder
                 .init()
+                .withTitle('Play')
+                .withDescription('It is wonderful to play with friends')
+                .withImage('img/play.gif')
+                .withAudio('audio/play.mp3')
+                .build());
+
+            ConceptRepository.addConcept(ConceptBuilder
+                .init()
                 .withTitle('Trousers')
                 .withDescription('Wear them!')
                 .withImage('img/trousers.gif')
