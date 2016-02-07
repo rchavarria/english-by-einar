@@ -29,6 +29,12 @@
     "test": "bower install && gulp test"
   },
   "cordovaPlugins": [
-    "org.apache.cordova.media"
+    "org.apache.cordova.media",
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
   ]
 }
