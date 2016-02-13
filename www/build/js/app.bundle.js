@@ -62128,8 +62128,10 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var ionic_1 = __webpack_require__(6);
+	var concept_1 = __webpack_require__(357);
 	var ConceptPage = (function () {
 	    function ConceptPage() {
+	        this.concept = new concept_1.Concept();
 	    }
 	    ConceptPage = __decorate([
 	        ionic_1.Page({
@@ -62140,6 +62142,27 @@
 	    return ConceptPage;
 	})();
 	exports.ConceptPage = ConceptPage;
+
+
+/***/ },
+/* 357 */
+/***/ function(module, exports) {
+
+	/**
+	 * Concept model
+	 *
+	 * Holds all data related to English concepts
+	 */
+	var Concept = (function () {
+	    function Concept() {
+	        this.title = 'Dog';
+	        this.description = 'Wouf! Wouf!';
+	        this.imageUrl = '/img/dog.png';
+	        this.audioUrl = '/audio/dog.mp3';
+	    }
+	    return Concept;
+	})();
+	exports.Concept = Concept;
 
 
 /***/ }
