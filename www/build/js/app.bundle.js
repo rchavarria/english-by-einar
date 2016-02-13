@@ -62133,6 +62133,12 @@
 	    function ConceptPage() {
 	        this.concept = new concept_1.Concept();
 	    }
+	    ConceptPage.prototype.play = function () {
+	        console.log('play');
+	    };
+	    ConceptPage.prototype.next = function () {
+	        console.log('next');
+	    };
 	    ConceptPage = __decorate([
 	        ionic_1.Page({
 	            templateUrl: 'build/pages/concept/concept.html'
@@ -62146,8 +62152,10 @@
 
 /***/ },
 /* 357 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+	var image_1 = __webpack_require__(358);
+	var audio_1 = __webpack_require__(359);
 	/**
 	 * Concept model
 	 *
@@ -62157,12 +62165,48 @@
 	    function Concept() {
 	        this.title = 'Dog';
 	        this.description = 'Wouf! Wouf!';
-	        this.imageUrl = '/img/dog.png';
-	        this.audioUrl = '/audio/dog.mp3';
+	        this.image = new image_1.Image();
+	        this.audio = new audio_1.Audio();
 	    }
 	    return Concept;
 	})();
 	exports.Concept = Concept;
+
+
+/***/ },
+/* 358 */
+/***/ function(module, exports) {
+
+	/**
+	 * Image model
+	 *
+	 * Holds data for images
+	 */
+	var Image = (function () {
+	    function Image() {
+	        this.url = '/img/dog.png';
+	    }
+	    return Image;
+	})();
+	exports.Image = Image;
+
+
+/***/ },
+/* 359 */
+/***/ function(module, exports) {
+
+	/**
+	 * Audio model
+	 *
+	 * Holds data for audio files
+	 */
+	var Audio = (function () {
+	    function Audio() {
+	        this.url = '/audio/dog.mp3';
+	    }
+	    return Audio;
+	})();
+	exports.Audio = Audio;
 
 
 /***/ }

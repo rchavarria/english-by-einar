@@ -16,16 +16,16 @@
     </div>
 
     <div class="item item-body">
-      <img class="full-image" [src]="concept.imageUrl" />
+      <img class="full-image" [src]="concept.image.url" />
       <p>{{concept.description}}</p>
     </div>
 
-    <div class="item item-icon-left">
+    <div class="item item-icon-left" (click)="play()">
       <i class="icon ion-play"></i>
       Play
     </div>
 
-    <div class="item item-icon-left">
+    <div class="item item-icon-left" (click)="next()">
       <i class="icon ion-skip-forward"></i>
       Next
     </div>

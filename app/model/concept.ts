@@ -1,3 +1,6 @@
+import { Image } from './image';
+import { Audio } from './audio';
+
 /**
  * Concept model
  *
@@ -6,7 +9,7 @@
 export class Concept {
   title: String = 'Dog';
   description: String = 'Wouf! Wouf!';
-  imageUrl: String = '/img/dog.png';
-  audioUrl: String = '/audio/dog.mp3';
+  image: Image = new Image();
+  audio: Audio = new Audio();
 }
 

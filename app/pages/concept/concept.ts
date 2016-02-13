@@ -10,4 +10,13 @@ export class ConceptPage {
   constructor() {
     this.concept = new Concept();
   }
+
+  play() {
+    console.log('play');
+  }
+
+  next() {
+    console.log('next');
+  }
+
 }
