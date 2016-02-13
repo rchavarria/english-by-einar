@@ -38,3 +38,6 @@ plugins/
 sign-and-align.sh
 Signed-and-Aligned.apk
 
+# Built JavaScript, CSS and font files
+www/build/**
+
