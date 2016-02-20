@@ -5,5 +5,10 @@
  */
 export class Audio {
   url: String = '/audio/dog.mp3';
+
+  constructor(url: String) {
+    this.url = url;
+  }
+
 }
 

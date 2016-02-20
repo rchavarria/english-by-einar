@@ -1,14 +1,14 @@
 import { Concept } from '../model/concept';
 
-export class Repository {
-  current: int = 0;
-  concepts: Array = [];
+export class ConceptRepository {
+  current: number = 0;
+  concepts: Array<Concept> = [];
 
   constructor() {
   }
 
   addConcept(newConcept: Concept) {
-    concepts.push(newConcept);
+    this.concepts.push(newConcept);
   }
 
   count() {

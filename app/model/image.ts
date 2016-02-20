@@ -5,5 +5,10 @@
  */
 export class Image {
   url: String = '/img/dog.png';
+
+  constructor(url: String) {
+    this.url = url;
+  }
+
 }
 
