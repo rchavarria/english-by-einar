@@ -1,19 +1,9 @@
-
 <ion-navbar *navbar>
-  <button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
-  <ion-title>Hello Ionic</ion-title>
+  <ion-title>{{concept.title}}</ion-title>
 </ion-navbar>
 
-
 <ion-content padding class="getting-started">
-
   <div class="list card">
-
-    <div class="item item-divider">
-      {{concept.title}}
-    </div>
 
     <div class="item item-body">
       <img class="full-image" [src]="concept.image.url" />
@@ -31,5 +21,4 @@
     </div>
 
   </div>
-
 </ion-content>
