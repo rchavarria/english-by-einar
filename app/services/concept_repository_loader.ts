@@ -94,7 +94,7 @@ export class ConceptRepositoryLoader {
       new ConceptBuilder()
         .withTitle('Play')
         .withDescription('It is wonderful to play with friends')
-        .withImage('img/play.gif')
+        .withImage('img/play.png')
         .withAudio('audio/play.mp3')
         .build());
 
