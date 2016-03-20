@@ -2,23 +2,27 @@
   <ion-title>{{concept.title}}</ion-title>
 </ion-navbar>
 
-<ion-content padding class="getting-started">
-  <div class="list card">
+<ion-content>
+  <ion-card>
 
-    <div class="item item-body">
-      <img class="full-image" [src]="concept.image.url" />
-      <p>{{concept.description}}</p>
-    </div>
+    <ion-row>
+      <ion-col offset-33 text-center>
+        <button (click)="play()">
+          <ion-icon name="play"> Play</ion-icon>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button (click)="next()">
+          <ion-icon name="skip-forward"> Next</ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
 
-    <div class="item item-icon-left" (click)="play()">
-      <i class="icon ion-play"></i>
-      Play
-    </div>
+    <img [src]="concept.image.url" />
 
-    <div class="item item-icon-left" (click)="next()">
-      <i class="icon ion-skip-forward"></i>
-      Next
-    </div>
+    <ion-card-content>
+      <h3 class="card-title">{{concept.description}}</h3>
+    </ion-card-content>
 
-  </div>
+  </ion-card>
 </ion-content>
